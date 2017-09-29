@@ -49,7 +49,7 @@ route_props = [
         ]
 
 routes = extract_data("./data/routes.dat", route_props)
-airports = extract_data("./data/airports.dat", airport_props)
+airports = extract_data("./data/airports_small.dat", airport_props)
 
 driver = GraphDatabase.driver("bolt://localhost:7687", auth=basic_auth("neo4j", "password"))
 session = driver.session()
